@@ -54,7 +54,7 @@ function Login() {
 
     // Qolgan logika (masalan, setLogin() ishlatish)
     setLogin(storedUser);
-    window.location.reload();
+    // window.location.reload();
   };
 
   return (
