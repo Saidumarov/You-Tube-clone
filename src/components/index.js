@@ -1,0 +1,12 @@
+export { default as App } from "./app/App";
+export { default as Min } from "./min/min";
+export { default as Chanel } from "./chanel/chanel";
+export { default as Search } from "./search/search";
+export { default as Navbar } from "./navbar/navbar";
+export { default as SearchBar } from "./search-bar/search-bar";
+export { default as Category } from "./category/index";
+export { default as Videos } from "./videos/videos";
+export { default as VideoCard } from "./video-cad/video-card";
+export { default as ChanelCard } from "./chanel-card/chanel-card";
+export { default as Loader } from "./loader/loader";
+export { default as VideoDetail } from "./videodetail/video-detail";
