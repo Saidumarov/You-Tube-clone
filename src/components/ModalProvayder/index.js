@@ -8,7 +8,7 @@ function ModalProvayder({ children }) {
   // Get the stored user value from localStorage or use an empty string if it doesn't exist
   const storedUser = localStorage.getItem("user") || "";
   const us = localStorage.getItem("login") || "";
-
+  console.log(storedUser);
   const [modal, setModal] = useState("none");
   const [modal1, setModal1] = useState("none");
   const [number, setNumber] = useState(40);
@@ -20,9 +20,9 @@ function ModalProvayder({ children }) {
   const [user, setUser] = useState(us);
   useEffect(() => {
     // Update localStorage whenever the login state changes
-    localStorage.setItem("user", login);
     localStorage.setItem("login", user);
-  }, [login]);
+    localStorage.setItem("user", login);
+  });
 
   return (
     <div>
