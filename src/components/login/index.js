@@ -49,7 +49,7 @@ function Login() {
     // localStorage ga input qiymatlarini saqlash
     localStorage.setItem("user", name.charAt(0));
     setLogin(storedUser);
-    // window.location.reload();
+    window.location.reload();
   };
 
   return (
