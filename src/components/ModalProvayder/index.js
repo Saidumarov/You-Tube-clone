@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { Menyu } from "../../constants/site-bar-btn";
-import { Button } from "@mui/material";
-
 export const Modal = React.createContext();
 
 function ModalProvayder({ children }) {
   // Get the stored user value from localStorage or use an empty string if it doesn't exist
+
   const storedUser = localStorage.getItem("user") || "";
   const us = localStorage.getItem("login") || "";
   const [modal, setModal] = useState("none");
   const [modal1, setModal1] = useState("none");
   const [number, setNumber] = useState(40);
   const [left, setLeft] = useState("");
+  const [set, setSet] = useState("");
   const [siteBar, setSiteBar] = useState(<Menyu />);
   // Initialize login state with the stored user value
   const [login, setLogin] = useState(storedUser);
@@ -43,6 +43,8 @@ function ModalProvayder({ children }) {
           setShowmodal,
           user,
           setUser,
+          set,
+          setSet,
         }}
       >
         {children}

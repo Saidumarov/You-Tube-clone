@@ -20,15 +20,18 @@ function Navbar() {
     setLeft,
     login,
     setShowmodal,
-    showmodal,
     user,
-    setUser,
+    set,
+    setSet,
   } = useContext(Modal);
+
   useEffect(() => {
-    setNumber(40);
+    setNumber("40");
     setSiteBar(<Menyu />);
     setLeft("");
+    setSet(0);
   }, []);
+
   const show = () => {
     setShowmodal(true);
   };
@@ -49,7 +52,6 @@ function Navbar() {
         className="nav"
       >
         <div className="menu-nav">
-          {/* <Menyu menyu={menyua} /> */}
           {siteBar}
           <Link to={"/"} className="logo">
             {logo}
@@ -62,10 +64,10 @@ function Navbar() {
           </span>
         </Box>
         <Box className="nav-icon-right">
-          <span className="span">
+          <span className={`span ${user}`}>
             <VideoCall />
           </span>
-          <span className="span">
+          <span className={`span ${user}`}>
             <Obuna />
           </span>
           <Button className={`sigin ${user}`} onClick={show}>
@@ -75,7 +77,7 @@ function Navbar() {
           <Login />
         </Box>
       </Stack>
-      <div className={`nav-item ${left}`}>
+      <div className={`nav-item ${left}`} style={{ transition: `.${set}s` }}>
         <div className={`sigle-page-min-item ${left}`}>
           <SiteBar />
         </div>

@@ -61,12 +61,16 @@ iframe {
   cursor: pointer;
   transition: 0.2s;
   color: rgba(255, 255, 255, 0.776);
+  display: none;
 }
 .nav-icon-right .span:hover {
   background-color: #302f2f;
 }
 .nav-icon-right .span:active {
   background-color: rgba(112, 107, 107, 0.838);
+}
+.nav-icon-right .span.true {
+  display: flex;
 }
 
 ::-webkit-scrollbar {
@@ -138,4 +142,17 @@ iframe {
 .min-contenir {
   width: 100% !important;
   background-color: #76323f;
+}
+.menu-active {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: 0.2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -5px;
+}
+.menu-active:active {
+  background-color: rgba(112, 107, 107, 0.838);
 }

@@ -8,11 +8,12 @@ import { Menyu } from "../../constants/site-bar-btn";
 function Min() {
   const [selectCategory, setSelectCategory] = useState("New");
   const [videos, setVideos] = useState([]);
-  const { left, setLeft, setSiteBar } = useContext(Modal);
+  const { left, setLeft, setSiteBar, setSet } = useContext(Modal);
   const selectedCategoryHander = (category) => setSelectCategory(category);
   useEffect(() => {
     setLeft("");
     setSiteBar(<Menyu />);
+    setSet(0);
   }, []);
   useEffect(() => {
     const getData = async () => {

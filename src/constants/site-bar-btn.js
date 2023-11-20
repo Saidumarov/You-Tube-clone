@@ -116,7 +116,7 @@ export const Menyu = () => {
   };
 
   return (
-    <span onClick={menyu}>
+    <span onClick={menyu} className="menu-active">
       <Menu />
     </span>
   );
@@ -131,7 +131,7 @@ export const Menyuu = () => {
     }
   };
   return (
-    <span onClick={menyu}>
+    <span onClick={menyu} className="menu-active">
       <Menu />
     </span>
   );

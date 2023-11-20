@@ -19,7 +19,7 @@ function VideoDetail() {
   const [post, setPost] = useState(false);
   const initialIsSubscribed = localStorage.getItem("isSubscribed") === "true";
   const [isSubscribed, setIsSubscribed] = useState(initialIsSubscribed);
-  const { setModal, setModal1, setNumber, setSiteBar, setLeft } =
+  const { setModal, setModal1, setNumber, setSiteBar, setLeft, setSet } =
     useContext(Modal);
   useEffect(() => {
     localStorage.setItem("isSubscribed", isSubscribed.toString());
@@ -32,6 +32,9 @@ function VideoDetail() {
     setNumber(40);
     setSiteBar(<Menyuu />);
     setLeft("activa ");
+    setTimeout(() => {
+      setSet(4);
+    }, 1500);
   }, []);
 
   useEffect(() => {

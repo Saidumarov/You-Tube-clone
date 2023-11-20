@@ -10,11 +10,12 @@ import { Menyu } from "../../constants/site-bar-btn";
 function Search() {
   const { id } = useParams();
   const [videos, setVideos] = useState([]);
-  const { setNumber, setLeft, setSiteBar } = useContext(Modal);
+  const { setNumber, setLeft, setSiteBar, setSet } = useContext(Modal);
   useEffect(() => {
     setNumber(80);
     setLeft("");
     setSiteBar(<Menyu />);
+    setSet(0);
   }, []);
   useEffect(() => {
     const getData = async () => {

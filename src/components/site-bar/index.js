@@ -3,8 +3,6 @@ import "./index.scss";
 import { Btn, Btn1, Btn2, Btn3 } from "../../constants/site-bar-btn";
 import { Link } from "react-router-dom";
 import { Modal } from "../ModalProvayder";
-import { Menu } from "@mui/material";
-import { logo } from "../../constants";
 
 function SiteBar() {
   const [selectedTitle, setSelectedTitle] = useState(null);
@@ -12,15 +10,6 @@ function SiteBar() {
   useEffect(() => {});
   return (
     <div>
-      {/* <div className="menu">
-        <span>
-          <Menu />
-          kjcsafjkanfkjn
-        </span>
-        <Link to={"/"} className="logo">
-          {logo}
-        </Link>
-      </div> */}
       <div className={`single-page-wrapper ${left}`}>
         {Btn?.map((item, index) => (
           <Link to={item?.link}>
