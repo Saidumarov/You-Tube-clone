@@ -12,14 +12,11 @@ function Login() {
 
   // Saqlangan user ma'lumotini olish uchun state
   const [storedUser, setStoredUser] = useState("");
-  const show = () => {
-    setShowmodal(true);
-  };
   useEffect(() => {
     // localStorage dan o'qib olish
     const userFromStorage = localStorage.getItem("user");
     setStoredUser(userFromStorage);
-  }, []); // useEffect faqat bir marta ishlasin
+  }); // useEffect faqat bir marta ishlasin
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -51,8 +48,6 @@ function Login() {
 
     // localStorage ga input qiymatlarini saqlash
     localStorage.setItem("user", name.charAt(0));
-
-    // Qolgan logika (masalan, setLogin() ishlatish)
     setLogin(storedUser);
     // window.location.reload();
   };
