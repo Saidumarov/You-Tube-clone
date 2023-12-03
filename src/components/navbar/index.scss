@@ -119,3 +119,10 @@ nav {
   font-size: 20px;
   cursor: pointer;
 }
+
+.logo {
+  svg {
+    width: 100px !important;
+    height: 100px !important;
+  }
+}
