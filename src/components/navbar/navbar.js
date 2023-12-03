@@ -47,7 +47,6 @@ function Navbar() {
     setLogoutWra("");
     setUser("");
     setLogin("");
-    window.location.reload();
   };
   return (
     <nav>

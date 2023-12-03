@@ -34,9 +34,6 @@ function Login() {
 
   const loginn = (e) => {
     e.preventDefault();
-
-    // Validatsiya tekshirish
-
     setShowmodal(false);
 
     localStorage.setItem("login", true);
