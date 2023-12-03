@@ -18,6 +18,7 @@ function SearchBar() {
     <Paper component={"form"} onSubmit={submitHandler} className="search-from">
       <input
         type="search"
+        name="search"
         placeholder="Search..."
         className="search-bar"
         value={value}

@@ -4,7 +4,7 @@ import React from "react";
 import "./index.scss";
 import { Link } from "react-router-dom";
 function ChanelCard({ video }) {
-  console.log(video);
+  // console.log(video);
   return (
     <Box
       sx={{
@@ -16,7 +16,11 @@ function ChanelCard({ video }) {
         margin: "auto",
       }}
     >
-      <Link to={`/channel/${video?.id?.channelId}`}>
+      <Link
+        to={`/channel/${
+          video?.id?.channelId ? video?.id?.channelId : video?.id
+        }`}
+      >
         <CardContent
           sx={{
             display: "flex",

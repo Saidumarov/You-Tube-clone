@@ -23,7 +23,6 @@ function VideoCard({ video }) {
         />
         <CardContent
           sx={{
-            backgroundColor: "#141A1F",
             position: "relative",
           }}
           className="card-content"

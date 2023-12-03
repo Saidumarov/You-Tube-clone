@@ -5,13 +5,15 @@ import { Link } from "react-router-dom";
 import SearchBar from "../search-bar/search-bar";
 import "./index.scss";
 import { MicRounded, VideoCall } from "@mui/icons-material";
-import { Obuna } from "../../constants/svg";
+import { Obuna, X } from "../../constants/svg";
 import SiteBar from "../site-bar";
 import { useContext, useEffect } from "react";
 import { Modal } from "../ModalProvayder";
 import { Menyu } from "../../constants/site-bar-btn";
 import Login from "../login";
+import { useState } from "react";
 function Navbar() {
+  const [logoutWra, setLogoutWra] = useState();
   const {
     left,
     setSiteBar,
@@ -23,6 +25,8 @@ function Navbar() {
     user,
     set,
     setSet,
+    setUser,
+    setLogin,
   } = useContext(Modal);
 
   useEffect(() => {
@@ -34,6 +38,16 @@ function Navbar() {
 
   const show = () => {
     setShowmodal(true);
+  };
+
+  const logout = () => {
+    setLogoutWra("active");
+  };
+  const Logout = () => {
+    setLogoutWra("");
+    setUser("");
+    setLogin("");
+    window.location.reload();
   };
   return (
     <nav>
@@ -73,8 +87,19 @@ function Navbar() {
           <Button className={`sigin ${user}`} onClick={show}>
             SIGN IN
           </Button>
-          <span className={`usera ${user}`}>{login}</span>
+          <span className={`usera ${user}`} onClick={logout}>
+            {login}
+          </span>
           <Login />
+          <div className={`logout-w ${logoutWra}`}>
+            <span className="X-w" onClick={() => setLogoutWra("")}>
+              <X />
+            </span>
+            <Button className={`logout ${logoutWra}`} onClick={Logout}>
+              {" "}
+              LOGO Ut
+            </Button>
+          </div>
         </Box>
       </Stack>
       <div className={`nav-item ${left}`} style={{ transition: `.${set}s` }}>

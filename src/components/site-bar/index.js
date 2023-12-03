@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { Modal } from "../ModalProvayder";
 
 function SiteBar() {
-  const [selectedTitle, setSelectedTitle] = useState(null);
+  const [selectedTitle, setSelectedTitle] = useState("Главная");
   const { color, left } = useContext(Modal);
   useEffect(() => {});
   return (
@@ -16,8 +16,7 @@ function SiteBar() {
             <button
               key={index}
               style={{
-                backgroundColor:
-                  selectedTitle === item?.title ? `${color}` : "",
+                backgroundColor: selectedTitle === item?.title ? "#272727" : "",
               }}
               onClick={() => setSelectedTitle(item?.title)}
               className={`button-menyu1 ${left}`}
@@ -33,7 +32,7 @@ function SiteBar() {
             <button
               key={index}
               style={{
-                backgroundColor: selectedTitle === item?.title ? "#182c3e" : "",
+                backgroundColor: selectedTitle === item?.title ? "#272727" : "",
               }}
               onClick={() => setSelectedTitle(item?.title)}
             >
@@ -49,7 +48,7 @@ function SiteBar() {
                 key={index}
                 style={{
                   backgroundColor:
-                    selectedTitle === item?.title ? "#182c3e" : "",
+                    selectedTitle === item?.title ? "#272727" : "",
                 }}
                 onClick={() => setSelectedTitle(item?.title)}
               >
@@ -63,7 +62,7 @@ function SiteBar() {
             <button
               key={index}
               style={{
-                backgroundColor: selectedTitle === item?.title ? "#182c3e" : "",
+                backgroundColor: selectedTitle === item?.title ? "#272727" : "",
               }}
               onClick={() => setSelectedTitle(item?.title)}
             >

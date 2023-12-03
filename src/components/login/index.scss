@@ -1,3 +1,21 @@
+.div-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.login-x {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+}
+
 .login-wrapper {
   width: 100%;
   height: 100%;
@@ -16,6 +34,7 @@
   background-color: #242b38;
   border-radius: 15px;
   position: relative;
+  margin: 0 auto;
 }
 
 .login-box {

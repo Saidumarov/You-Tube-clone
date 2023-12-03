@@ -6,7 +6,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #141a1f;
+  background-color: #0f0f0f;
 }
 .MuiSvgIcon-root {
   color: #a4a4a4 !important;
@@ -16,7 +16,7 @@ body {
   border: none;
   outline: 0;
   width: 450px;
-  background-color: #141a1f;
+  background-color: #0f0f0f;
   outline: none;
   color: rgb(201, 198, 198);
   font-size: 15px;
@@ -30,7 +30,7 @@ body {
   border-radius: 20px !important;
   padding-left: 20px;
   border: 1px solid rgb(156, 152, 152);
-  background-color: #141a1f !important;
+  background-color: #0f0f0f !important;
 }
 .serch-icon {
   color: rgba(255, 255, 255, 0.776);
@@ -90,14 +90,8 @@ iframe {
   cursor: pointer;
 }
 
-.category-wrap:hover::-webkit-scrollbar {
-  transition: 0.3s all ease;
-  width: 0;
-  height: 6px;
-  cursor: pointer;
-}
 .category-btn:hover {
-  background-color: #2b6cb0 !important;
+  background-color: #464444 !important;
   cursor: pointer;
 }
 
@@ -135,6 +129,9 @@ iframe {
   color: white;
   border-radius: 8px !important;
   margin: 0 auto;
+  margin-top: -30px;
+  background-color: #272727;
+  position: sticky;
 }
 .cateygory-icon {
   color: white;
@@ -153,6 +150,11 @@ iframe {
   justify-content: center;
   margin-left: -5px;
 }
+
+.menu-active:hover {
+  background-color: rgba(53, 51, 51, 0.838);
+}
+
 .menu-active:active {
-  background-color: rgba(112, 107, 107, 0.838);
+  background-color: rgba(88, 84, 84, 0.838);
 }

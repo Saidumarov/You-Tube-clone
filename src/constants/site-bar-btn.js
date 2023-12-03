@@ -24,7 +24,7 @@ import { Modal } from "../components/ModalProvayder";
 export const Btn = [
   {
     ico: <Home />,
-    title: " Главная",
+    title: "Главная",
     link: "/",
   },
   {

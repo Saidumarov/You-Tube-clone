@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Apiservice } from "../../service/api.service";
 import { Avatar, Box, Stack, Typography } from "@mui/material";
-import ReactPlayer from "react-player";
+import ReactPlayer from "react-player/youtube";
 import { Loader, Videos } from "../index";
 import { CheckCircle, Visibility } from "@mui/icons-material";
 import "./index.scss";
@@ -59,10 +59,6 @@ function VideoDetail() {
   if (!videoDetail) {
     return <Loader />;
   }
-  // if (!relatedVIdeo) {
-  //   // Data is still being fetched
-  //   return relatedVIdeo; // or you can render a loading indicator
-  // }
 
   const handelmodal = () => {
     setModal("block");
@@ -80,8 +76,8 @@ function VideoDetail() {
     <div>
       <Box className="video-wrap-clon" mb={10}>
         <CopeModal
-          value={`https://www.youtube.com//video/${videoDetail?.id}`}
-          shareurl={`https://www.youtube.com/${videoDetail?.id}`}
+          value={`https://you-tube-demo.vercel.app/video/${videoDetail?.id}`}
+          shareurl={`https://you-tube-demo.vercel.app/${videoDetail?.id}`}
         />
         <Box display={"flex"} className="video-wrap-clon-itme">
           <Box width={"65%"}>

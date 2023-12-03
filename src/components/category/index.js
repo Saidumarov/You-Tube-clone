@@ -3,7 +3,7 @@ import { category } from "../../constants";
 import { colors } from "../../constants/colors";
 function Category({ selectedCategoryHander, selectCategory }) {
   return (
-    <Stack>
+    <Stack className="category-btn-w">
       <Box>
         {category?.map((item) => (
           <button
@@ -11,8 +11,7 @@ function Category({ selectedCategoryHander, selectCategory }) {
             className="category-btn"
             style={{
               borderRadius: "0",
-              backgroundColor: item?.name === selectCategory && "#2B6CB0",
-              color: item?.name === selectCategory && "#fff",
+              backgroundColor: item?.name === selectCategory && "#464444 ",
             }}
             onClick={() => selectedCategoryHander(item?.name)}
           >

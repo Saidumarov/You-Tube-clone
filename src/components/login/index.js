@@ -3,6 +3,7 @@ import "./index.scss";
 import { logo } from "../../constants";
 import { Button } from "@mui/material";
 import { Modal } from "../ModalProvayder";
+import { X } from "../../constants/svg";
 
 function Login() {
   const { setLogin, showmodal, setShowmodal, setUser } = useContext(Modal);
@@ -13,10 +14,10 @@ function Login() {
   // Saqlangan user ma'lumotini olish uchun state
   const [storedUser, setStoredUser] = useState("");
   useEffect(() => {
-    // localStorage dan o'qib olish
+    // localStorage dan chiqarib  olish
     const userFromStorage = localStorage.getItem("user");
     setStoredUser(userFromStorage);
-  }); // useEffect faqat bir marta ishlasin
+  });
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -35,11 +36,7 @@ function Login() {
     e.preventDefault();
 
     // Validatsiya tekshirish
-    const form = e.target.form;
-    if (!form.checkValidity()) {
-      form.reportValidity();
-      return;
-    }
+
     setShowmodal(false);
 
     localStorage.setItem("login", true);
@@ -55,20 +52,26 @@ function Login() {
   return (
     <>
       {showmodal && (
-        <div className="login-wrapper">
+        <div className="div-box">
+          <div
+            className="login-wrapper"
+            onClick={() => setShowmodal(false)}
+          ></div>
           <div className="login-wrapper-item">
+            <div className="login-x" onClick={() => setShowmodal(false)}>
+              <X />
+            </div>
             <div className="login-box">{logo}</div>
             <div className="login-box1">
               <form>
                 <span>
-                  {/* Inputlarga onChange hodisasi qo'shildi */}
                   <input
                     type="text"
                     name="user"
                     value={name}
                     onChange={handleInputChange}
                     required
-                    placeholder="name"
+                    placeholder="Name"
                   />
                   <input
                     type="email"
@@ -76,7 +79,7 @@ function Login() {
                     value={email}
                     onChange={handleInputChange}
                     required
-                    placeholder="email"
+                    placeholder="Email"
                   />
                   <input
                     type="password"
@@ -84,7 +87,7 @@ function Login() {
                     value={password}
                     onChange={handleInputChange}
                     required
-                    placeholder="password"
+                    placeholder="Password"
                   />
                   <Button
                     type="submit"
@@ -97,8 +100,6 @@ function Login() {
               </form>
             </div>
           </div>
-
-          {/* Saqlangan user ma'lumotini korsatish */}
         </div>
       )}
     </>
