@@ -19,7 +19,7 @@ body {
   background-color: #0f0f0f;
   outline: none;
   color: rgb(201, 198, 198);
-  font-size: 15px;
+  font-size: 17px;
 }
 ::placeholder {
   color: rgb(201, 198, 198);
@@ -183,6 +183,8 @@ iframe {
     left: 0;
     top: 60px;
     width: 100% !important;
-    background-color: red !important;
+  }
+  .form {
+    margin-top: 50px;
   }
 }

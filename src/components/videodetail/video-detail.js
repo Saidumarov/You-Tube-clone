@@ -80,7 +80,7 @@ function VideoDetail() {
           shareurl={`https://you-tube-demo.vercel.app/${videoDetail?.id}`}
         />
         <Box display={"flex"} className="video-wrap-clon-itme">
-          <Box width={"65%"}>
+          <Box width={"65%"} className="videoplay">
             <ReactPlayer
               url={`https://.youtube.com/watch?v=${id}`}
               className="react-palyr"
@@ -102,6 +102,7 @@ function VideoDetail() {
                 marginTop={"5px"}
                 color={"white"}
                 marginLeft={"10px"}
+                className="left"
               >
                 <Link
                   to={`/channel/${videoDetail?.snippet?.channelId}`}

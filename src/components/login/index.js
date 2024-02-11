@@ -60,7 +60,7 @@ function Login() {
             </div>
             <div className="login-box">{logo}</div>
             <div className="login-box1">
-              <form>
+              <form className="form">
                 <span>
                   <input
                     type="text"
