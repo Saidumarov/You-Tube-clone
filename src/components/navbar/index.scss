@@ -126,3 +126,10 @@ nav {
     height: 100px !important;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .usera {
+    margin-right: 5px !important;
+    display: none;
+  }
+}

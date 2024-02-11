@@ -9,7 +9,7 @@ import { Obuna, X } from "../../constants/svg";
 import SiteBar from "../site-bar";
 import { useContext, useEffect } from "react";
 import { Modal } from "../ModalProvayder";
-import { Menyu } from "../../constants/site-bar-btn";
+import { Menyu, Menyuu } from "../../constants/site-bar-btn";
 import Login from "../login";
 import { useState } from "react";
 function Navbar() {
@@ -34,6 +34,18 @@ function Navbar() {
     setSiteBar(<Menyu />);
     setLeft("");
     setSet(0);
+  }, []);
+
+  useEffect(() => {
+    const maxWidth = window.innerWidth;
+
+    if (maxWidth <= 1440) {
+      setLeft("");
+      setSiteBar(<Menyu />);
+      setSet(0);
+    } else {
+      setSiteBar(<Menyuu />);
+    }
   }, []);
 
   const show = () => {

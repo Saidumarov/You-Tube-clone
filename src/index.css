@@ -158,3 +158,31 @@ iframe {
 .menu-active:active {
   background-color: rgba(88, 84, 84, 0.838);
 }
+
+@media screen and (max-width: 890px) {
+  .search-bar {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .search-bar {
+    width: 100%;
+  }
+  .span {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  nav {
+    height: 110px;
+  }
+  form {
+    position: absolute;
+    left: 0;
+    top: 60px;
+    width: 100% !important;
+    background-color: red !important;
+  }
+}

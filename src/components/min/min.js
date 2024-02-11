@@ -4,16 +4,23 @@ import { Category, Videos } from "../index";
 import { Apiservice } from "../../service/api.service";
 import "./index.scss";
 import { Modal } from "../ModalProvayder";
-import { Menyu } from "../../constants/site-bar-btn";
+import { Menyu, Menyuu } from "../../constants/site-bar-btn";
 function Min() {
   const [selectCategory, setSelectCategory] = useState("New");
   const [videos, setVideos] = useState([]);
   const { left, setLeft, setSiteBar, setSet } = useContext(Modal);
   const selectedCategoryHander = (category) => setSelectCategory(category);
+
   useEffect(() => {
-    setLeft("");
-    setSiteBar(<Menyu />);
-    setSet(0);
+    const maxWidth = window.innerWidth;
+
+    if (maxWidth <= 1440) {
+      setLeft("");
+      setSiteBar(<Menyuu />);
+      setSet(0);
+    } else {
+      setSiteBar(<Menyu />);
+    }
   }, []);
   useEffect(() => {
     const getData = async () => {
@@ -21,7 +28,6 @@ function Min() {
         `search?part=snippet&q=${selectCategory}`
       );
       setVideos(data.items);
-      // Apiservice.fetching("search").then((data) => setVideos(data));
     };
     getData(getData);
   }, [selectCategory]);
