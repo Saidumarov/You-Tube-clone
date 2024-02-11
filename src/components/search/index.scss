@@ -36,3 +36,32 @@
     grid-template-columns: auto;
   }
 }
+
+@media screen and (max-width: 1050px) {
+  .search-wrapper {
+    overflow: hidden;
+
+    width: 98%;
+
+    .card-content {
+      width: 90%;
+      h6 {
+        width: 100% !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .search-wrapper {
+    margin-left: -20px;
+    width: 100%;
+    .video-wrapper {
+      width: 100% !important;
+      .video-item {
+        width: 100% !important;
+        margin-left: 0 !important;
+      }
+    }
+  }
+}
